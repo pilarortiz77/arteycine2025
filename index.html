@@ -7,10 +7,13 @@
     <meta name="description" content="Descubre en Atrezzo & Tesoros la colección más exclusiva de atrezzo para cine, publicidad, fotografía y eventos. Explora también nuestra tienda de segunda mano con artículos vintage y únicos. ¡Tu aliado en sostenibilidad y creatividad, transformando espacios y proyectos con piezas llenas de historia!">
     <link rel="canonical" href="https://www.tudominio.com/index.html">
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter (Tipografía Principal) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display (Tipografía para Logo, si se prefiere) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
 
@@ -142,6 +145,7 @@
 
     </style>
 
+    <!-- Schema.org JSON-LD para SEO optimizado -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -167,14 +171,20 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+    <!-- Header / Navegación Principal -->
     <header class="bg-white shadow-xl py-4 fixed w-full z-50 transition-all duration-300 hover:py-5">
         <div class="container mx-auto flex justify-between items-center px-6">
+            <!-- LOGOTIPO "Atrezzo & Tesoros" -->
             <h1 class="logo-text">
                 <a href="index.html" class="flex items-center text-blue-800 hover:text-blue-900 transition-colors duration-300">
+                    <!-- Si tienes una imagen de logo, úsala así (preferible): -->
+                    <!-- <img src="./img/logo-atrezzo-tesoros.png" alt="Logo de Atrezzo & Tesoros" class="h-14 mr-3 animate-pulse"> -->
+                    <!-- Si no, usa el texto con estilo: -->
                     Atrezzo & <span class="text-red-500">Tesoros</span>
                 </a>
             </h1>
 
+            <!-- Menú de Navegación (Desktop) -->
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
                     <li><a href="index.html" class="text-gray-700 hover:text-blue-800 font-semibold text-lg transition duration-300 transform hover:scale-110 hover:shadow-md py-2 px-3 rounded-md">Inicio</a></li>
@@ -188,10 +198,12 @@
                 </ul>
             </nav>
 
+            <!-- Botón de Acceso Usuarios (Desktop) -->
             <a href="login.html" class="hidden md:block bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-800 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Acceso Usuarios
             </a>
 
+            <!-- Botón de Menú Hamburguesa (Móvil) -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <div class="hamburger-menu">
                     <span></span>
@@ -201,6 +213,7 @@
             </button>
         </div>
 
+        <!-- Menú Móvil (inicialmente oculto) -->
         <nav id="mobile-menu" class="md:hidden bg-white shadow-xl py-4 mt-2 hidden">
             <ul class="flex flex-col items-center space-y-4">
                 <li><a href="index.html" class="block text-gray-700 hover:text-blue-800 font-semibold transition duration-300 py-2 text-lg">Inicio</a></li>
@@ -218,12 +231,14 @@
 
     ---
 
+    <!-- Sección Hero (Video de Fondo) -->
     <section class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden pt-20">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="./videos/hero-video-placeholder.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        <div class="absolute inset-0 bg-black opacity-70 z-10"></div> <div class="relative z-20 p-6 max-w-5xl mx-auto">
+        <div class="absolute inset-0 bg-black opacity-70 z-10"></div> <!-- Mayor opacidad para el overlay -->
+        <div class="relative z-20 p-6 max-w-5xl mx-auto">
             <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-down">
                 Atrezzo para Tus Ideas, <span class="text-red-400">Tesoros con Historia</span>
             </h2>
@@ -238,6 +253,7 @@
 
     ---
 
+    <!-- Sección de Carrusel de Imágenes (Requiere JavaScript externo para funcionalidad avanzada) -->
     <section id="carrusel-destacados" class="py-16 bg-gradient-to-br from-indigo-50 to-blue-100 relative">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl lg:text-5xl font-extrabold mb-10 text-gray-800">Galería Destacada: Un Vistazo Exclusivo a Nuestros Tesoros</h2>
@@ -247,44 +263,49 @@
 
             <div class="carousel-container relative w-full max-w-6xl mx-auto rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-400">
                 <div class="carousel-wrapper flex">
+                    <!-- Slide 1: Foto1 -->
                     <div class="carousel-slide flex-shrink-0 w-full">
-                        <img src="./img/carrusel/atrezzo-camara-antigua.jpg" alt="Cámara de cine antigua de atrezzo para películas" class="w-full h-96 object-cover rounded-3xl">
+                        <img src="https://raw.githubusercontent.com/pilarortiz77/arteycine2025/main/img/foto1.jpeg" alt="Antiguo reloj de bolsillo vintage" class="w-full h-96 object-cover rounded-3xl">
                         <div class="carousel-slide-overlay">
                             <div class="max-w-md">
-                                <h3 class="text-3xl font-bold mb-2">Elegancia Cinematográfica Clásica</h3>
-                                <p class="text-md">Una cámara vintage icónica que transporta a la edad dorada del cine. Perfecta para ambientaciones históricas y producciones que demandan autenticidad.</p>
+                                <h3 class="text-3xl font-bold mb-2">Elegancia Atemporal: Reloj de Bolsillo</h3>
+                                <p class="text-md">Un fragmento de historia que marca el tiempo con sofisticación y precisión artesanal.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Slide 2: Foto2 -->
                     <div class="carousel-slide flex-shrink-0 w-full">
-                        <img src="./img/carrusel/segunda-mano-sillon-clasico.jpg" alt="Sillón clásico de segunda mano con tapicería vintage" class="w-full h-96 object-cover rounded-3xl">
+                        <img src="https://raw.githubusercontent.com/pilarortiz77/arteycine2025/main/img/foto2.jpeg" alt="Libro antiguo encuadernado en cuero" class="w-full h-96 object-cover rounded-3xl">
                         <div class="carousel-slide-overlay">
                             <div class="max-w-md">
-                                <h3 class="text-3xl font-bold mb-2">Confort y Estilo Vintage Restaurado</h3>
-                                <p class="text-md">Este sillón clásico, restaurado con esmero y tapicería original, añade un toque de distinción y calidez a cualquier espacio, invitando a la relajación.</p>
+                                <h3 class="text-3xl font-bold mb-2">Historias Guardadas: Libro Antiguo</h3>
+                                <p class="text-md">Páginas que susurran secretos de tiempos pasados, con una encuadernación que resiste.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Slide 3: Foto3 -->
                     <div class="carousel-slide flex-shrink-0 w-full">
-                        <img src="./img/carrusel/atrezzo-maquina-escribir.jpg" alt="Máquina de escribir antigua para atrezzo y decoración" class="w-full h-96 object-cover rounded-3xl">
+                        <img src="https://raw.githubusercontent.com/pilarortiz77/arteycine2025/main/img/foto3.jpeg" alt="Cámara fotográfica retro antigua" class="w-full h-96 object-cover rounded-3xl">
                         <div class="carousel-slide-overlay">
                             <div class="max-w-md">
-                                <h3 class="text-3xl font-bold mb-2">La Pluma de Ayer: Historia en Cada Letra</h3>
-                                <p class="text-md">Una máquina de escribir histórica que evoca épocas de inspiración y creatividad. Ideal para recrear oficinas de época o rincones de escritor bohemio.</p>
+                                <h3 class="text-3xl font-bold mb-2">Capturando el Ayer: Cámara Retro</h3>
+                                <p class="text-md">Un artefacto que inmortalizó momentos, listo para decorar o inspirar nuevas escenas.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Slide 4: Foto4 -->
                     <div class="carousel-slide flex-shrink-0 w-full">
-                        <img src="./img/carrusel/segunda-mano-jarron.jpg" alt="Jarrón de cerámica artesanal de segunda mano" class="w-full h-96 object-cover rounded-3xl">
+                        <img src="https://raw.githubusercontent.com/pilarortiz77/arteycine2025/main/img/foto4.jpeg" alt="Juego de té de porcelana antigua" class="w-full h-96 object-cover rounded-3xl">
                         <div class="carousel-slide-overlay">
                             <div class="max-w-md">
-                                <h3 class="text-3xl font-bold mb-2">Arte en Cerámica: Belleza que Perduró</h3>
-                                <p class="text-md">Un jarrón artesanal que cuenta historias a través de sus formas y texturas. Perfecto para añadir un carácter auténtico y un toque artístico a tu decoración.</p>
+                                <h3 class="text-3xl font-bold mb-2">Rituales Olvidados: Juego de Té</h3>
+                                <p class="text-md">Delicadas piezas de porcelana que invitan a revivir la elegancia de otras épocas.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Controles del carrusel (necesitarán JS para funcionar) -->
                 <button class="absolute top-1/2 left-6 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition duration-300 z-10 shadow-lg text-2xl" id="carousel-prev">&#10094;</button>
                 <button class="absolute top-1/2 right-6 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition duration-300 z-10 shadow-lg text-2xl" id="carousel-next">&#10095;</button>
             </div>
@@ -298,6 +319,7 @@
 
     ---
 
+    <!-- Sección de Novedades -->
     <section id="novedades" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl lg:text-5xl font-extrabold mb-10 text-gray-800">Últimas Novedades y Tesoros Recién Llegados</h2>
@@ -339,8 +361,10 @@
 
     ---
 
+    <!-- Sección de Servicios/Categorías -->
     <section id="servicios" class="py-16 bg-gradient-to-r from-blue-700 to-indigo-800 text-white parallax parallax-bg-1" style="background-image: url('./img/parallax-bg-1.jpg');">
-        <div class="absolute inset-0 bg-black opacity-60"></div> <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-4xl lg:text-5xl font-extrabold mb-10">Nuestros Servicios: Tu Aliado en Creatividad y Sostenibilidad</h2>
             <p class="text-lg mb-12 max-w-3xl mx-auto text-justify px-4">En **Atrezzo & Tesoros**, nos dedicamos a ofrecer soluciones flexibles y de alta calidad para todas tus necesidades de atrezzo y decoración. Atendemos tanto a profesionales del sector audiovisual y de eventos como a particulares que buscan dar un toque único y personal a sus espacios. Descubre cómo podemos ayudarte a dar vida a tus ideas y proyectos con piezas con historia y un servicio excepcional.</p>
 
@@ -363,6 +387,7 @@
 
     ---
 
+    <!-- Sección Por Qué Elegirnos (Nueva Sección para SEO y Valor) -->
     <section id="por-que-elegirnos" class="py-16 bg-gradient-to-br from-gray-50 to-gray-200">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl lg:text-5xl font-extrabold mb-10 text-gray-800">¿Por Qué Elegir Atrezzo & Tesoros? Tu Mejor Elección</h2>
@@ -392,20 +417,25 @@
 
     ---
 
+    <!-- Sección de Testimonios/Clientes -->
     <section id="testimonios" class="py-16 bg-gradient-to-br from-indigo-50 to-blue-50 parallax parallax-bg-2" style="background-image: url('./img/parallax-bg-2.jpg');">
-        <div class="absolute inset-0 bg-black opacity-60"></div> <div class="container mx-auto px-4 text-center relative z-10 text-white">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto px-4 text-center relative z-10 text-white">
             <h2 class="text-4xl lg:text-5xl font-extrabold mb-10">Lo que Dicen Nuestros Clientes y Colaboradores</h2>
             <p class="text-lg mb-12 max-w-3xl mx-auto text-justify px-4">La satisfacción y el éxito de quienes confían en nosotros son el motor que impulsa cada día nuestro trabajo. Nos enorgullece enormemente compartir algunas de las experiencias y opiniones positivas de nuestros valiosos clientes y colaboradores, quienes ya han descubierto el encanto, la eficiencia y la calidad que ofrece Atrezzo & Tesoros.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
                 <div class="bg-white bg-opacity-95 rounded-lg shadow-xl p-6 border-l-4 border-blue-500 text-gray-900 transform hover:scale-105 transition duration-300">
                     <p class="text-gray-700 italic mb-4 text-justify">"Encontrar el atrezzo perfecto para nuestra película de época fue una tarea que se simplificó enormemente gracias a Atrezzo & Tesoros. La calidad de las piezas que nos ofrecieron y, sobre todo, la excepcional atención al cliente y su disposición para adaptarse a nuestras necesidades y plazos, superaron todas las expectativas. Son, sin duda, un aliado indispensable para cualquier producción audiovisual de alto nivel."</p>
                     <p class="font-bold text-blue-700 mt-4">- María G., Directora de Arte en "Sueños de Gran Vía"</p>
                 </div>
+                <!-- Testimonio 2 (Completo) -->
                 <div class="bg-white bg-opacity-95 rounded-lg shadow-xl p-6 border-l-4 border-purple-500 text-gray-900 transform hover:scale-105 transition duration-300">
                     <p class="text-gray-700 italic mb-4 text-justify">"Soy una coleccionista apasionada de objetos con historia y un alma única, y la tienda de segunda mano de Atrezzo & Tesoros se ha convertido en mi lugar favorito para descubrir verdaderos tesoros. Cada pieza que he adquirido tiene una historia fascinante y ha añadido un toque único y personal a mi hogar. Su selección es inmejorable y siempre encuentro algo nuevo que me enamora y me inspira. ¡Totalmente recomendable para quienes buscan algo verdaderamente especial y sostenible!"</p>
                     <p class="font-bold text-blue-700 mt-4">- Javier S., Coleccionista y Diseñador de Interiores</p>
                 </div>
+                <!-- Testimonio 3 (Completo) -->
                 <div class="bg-white bg-opacity-95 rounded-lg shadow-xl p-6 border-l-4 border-green-500 text-gray-900 transform hover:scale-105 transition duration-300">
                     <p class="text-gray-700 italic mb-4 text-justify">"El servicio de alquiler de atrezzo de Atrezzo & Tesoros nos salvó en el último momento para un evento corporativo de gran envergadura. Tenían exactamente lo que necesitábamos, y la eficiencia en la entrega y recogida fue absolutamente impecable. Demostraron ser profesionales al 100%, con una capacidad de respuesta y un compromiso que nos dejaron muy satisfechos y tranquilos. Sin duda alguna, volveremos a colaborar con ellos en futuros proyectos sin dudarlo."</p>
                     <p class="font-bold text-blue-700 mt-4">- Laura P., Gerente de Eventos en "Momentos Inolvidables"</p>
@@ -421,6 +451,7 @@
 
     ---
 
+    <!-- Sección CTA (Llamada a la acción) -->
     <section class="py-16 bg-gradient-to-r from-blue-800 to-indigo-900 text-white text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6 animate-pulse-light">¿Listo para Encontrar Tu Próximo <span class="text-yellow-300">Tesoro</span> o la Pieza Perfecta?</h2>
@@ -440,8 +471,10 @@
 
     ---
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Columna 1: Logo y Descripción -->
             <div class="text-center md:text-left">
                 <h3 class="logo-text text-white mb-4">Atrezzo & <span class="text-red-500">Tesoros</span></h3>
                 <p class="text-sm leading-relaxed text-justify">
@@ -449,6 +482,7 @@
                 </p>
             </div>
 
+            <!-- Columna 2: Navegación Rápida -->
             <div class="text-center md:text-left">
                 <h3 class="text-xl font-semibold mb-4 text-white">Navegación Rápida</h3>
                 <ul class="space-y-2">
@@ -461,6 +495,7 @@
                 </ul>
             </div>
 
+            <!-- Columna 3: Contacto y Redes Sociales -->
             <div class="text-center md:text-left">
                 <h3 class="text-xl font-semibold mb-4 text-white">Contacta con Nosotros</h3>
                 <p class="text-sm mb-2">Email: <a href="mailto:info@tudominio.com" class="hover:underline">info@tudominio.com</a></p>
@@ -477,7 +512,7 @@
                         <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                     <a href="https://twitter.com/atrezzoytesoros" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-400 hover:text-blue-300 transition duration-300 transform hover:scale-110">
-                        <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.684l-7.994 9.167 8.848 10.702h-7.618l-5.604-6.843-6.435 6.843h-3.682l8.36-9.67-9.068-10.36h7.791l4.89 5.867zm1.189 17.151l-7.065-8.529-5.111 6.843h2.091l2.977-3.987 1.83 2.167z"/></svg>
+                        <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.684l-7.994 9.167 8.848 10.702h-7.618l-5.604-6.843-6.435 6.843h-3.682l8.36-9.67-9.068-10.36h7.791l4.89 5.867zM20.09 3.05h-3.36l-7.469 8.653-5.59 7.462h3.36l7.469-8.653 5.59-7.462z"/></svg>
                     </a>
                 </div>
             </div>
@@ -488,6 +523,7 @@
         </div>
     </footer>
 
+    <!-- Script para el menú móvil y carrusel básico -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Lógica para el menú móvil
@@ -555,4 +591,3 @@
     </script>
 </body>
 </html>
-    
