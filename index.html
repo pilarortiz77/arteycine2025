@@ -26,13 +26,31 @@
             left: 0;
             z-index: -1; /* Mover el video detrás del contenido */
         }
+        /* Clase para el botón de menú móvil */
+        .hamburger-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .hamburger-menu.open span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.open span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
     </style>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Atrezzo & Tesoros (Nombre de Tu Marca)",
+      "name": "Atrezzo & Tesoros",
       "url": "https://www.tudominio.com",
       "logo": "https://www.tudominio.com/img/logo.png",
       "contactPoint": {
@@ -58,7 +76,7 @@
                 </a>
             </h1>
 
-            <nav>
+            <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="index.html" class="text-gray-600 hover:text-blue-700 font-semibold transition duration-300">Inicio</a></li>
                     <li><a href="servicios.html" class="text-gray-600 hover:text-blue-700 font-semibold transition duration-300">Atrezzo Alquiler</a></li>
@@ -71,10 +89,32 @@
                 </ul>
             </nav>
 
-            <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+            <a href="login.html" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
                 Acceso Usuarios
             </a>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
         </div>
+
+        <nav id="mobile-menu" class="md:hidden bg-white shadow-lg py-4 mt-2 hidden">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="index.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Inicio</a></li>
+                <li><a href="servicios.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Atrezzo Alquiler</a></li>
+                <li><a href="tienda.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Tienda Segunda Mano</a></li>
+                <li><a href="galeria.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Galería</a></li>
+                <li><a href="testimonios.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Testimonios</a></li>
+                <li><a href="calendario.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Eventos</a></li>
+                <li><a href="mapa.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Ubicación</a></li>
+                <li><a href="contacto.html" class="block text-gray-600 hover:text-blue-700 font-semibold transition duration-300 py-2">Contacto</a></li>
+                <li><a href="login.html" class="block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Acceso Usuarios</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="relative h-screen flex items-center justify-center text-white text-center overflow-hidden pt-16">
@@ -82,7 +122,8 @@
             <source src="./videos/hero-video-placeholder.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        <div class="absolute inset-0 bg-black opacity-50 z-10"></div> <div class="relative z-20 p-6 max-w-4xl mx-auto">
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div class="relative z-20 p-6 max-w-4xl mx-auto">
             <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
                 Atrezzo para Tus Ideas, Tesoros con Historia
             </h2>
@@ -94,6 +135,8 @@
             </a>
         </div>
     </section>
+
+    ---
 
     <section id="novedades" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
@@ -114,4 +157,150 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-blue-700">Mesa de Centro Rústica Reciclada</h3>
                         <p class="text-gray-700 mb-4">Mueble robusto y con carácter, ideal para salón o ambientación. ¡Ahora en venta!</p>
-                        <a href="tienda.html" class="text-blue-600 hover:underline font-semibold">Descub
+                        <a href="tienda.html" class="text-blue-600 hover:underline font-semibold">Descubrir en tienda &rarr;</a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="./img/novedad3.jpg" alt="Cámara antigua de cine para atrezzo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-700">Cámara de Cine Clásica de los 70</h3>
+                        <p class="text-gray-700 mb-4">Auténtica cámara de Super 8, ideal para sets de rodaje o como elemento decorativo. ¡Única en su tipo!</p>
+                        <a href="servicios.html" class="text-blue-600 hover:underline font-semibold">Más sobre esta pieza &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="galeria.html" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out shadow-md text-lg">
+                    Ver Toda la Galería
+                </a>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="servicios" class="py-16 bg-blue-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10">Nuestros Servicios</h2>
+            <p class="text-lg mb-12 max-w-2xl mx-auto">Ofrecemos soluciones flexibles para todas tus necesidades de atrezzo y decoración, tanto para profesionales como para particulares.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-600 rounded-lg shadow-xl p-8 transform hover:scale-105 transition duration-300">
+                    <img src="./img/icon-alquiler.png" alt="Icono de alquiler" class="h-20 mx-auto mb-6">
+                    <h3 class="text-3xl font-semibold mb-4">Alquiler de Atrezzo</h3>
+                    <p class="text-lg mb-6">Amplia colección de piezas únicas y temáticas para cine, televisión, publicidad, fotografía, teatro y eventos. Encuentra lo que buscas para dar vida a tus proyectos.</p>
+                    <a href="servicios.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition duration-300">Explorar Atrezzo</a>
+                </div>
+                <div class="bg-blue-600 rounded-lg shadow-xl p-8 transform hover:scale-105 transition duration-300">
+                    <img src="./img/icon-segundamano.png" alt="Icono de segunda mano" class="h-20 mx-auto mb-6">
+                    <h3 class="text-3xl font-semibold mb-4">Tienda de Segunda Mano</h3>
+                    <p class="text-lg mb-6">Descubre tesoros con historia: muebles, decoración, objetos vintage y curiosidades. Artículos seleccionados con encanto para tu hogar o negocio.</p>
+                    <a href="tienda.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition duration-300">Visitar Tienda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="testimonios" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10 text-gray-800">Lo que Dicen Nuestros Clientes</h2>
+            <p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">La satisfacción de nuestros colaboradores y clientes es nuestra mayor prioridad.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-gray-700 italic mb-4">"Encontrar el atrezzo perfecto para nuestra película fue fácil y rápido gracias a Atrezzo & Tesoros. La calidad de las piezas y la atención al cliente son excepcionales."</p>
+                    <p class="font-semibold text-blue-700">- María G., Directora de Arte</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-gray-700 italic mb-4">"Adoro los tesoros que he encontrado en su tienda de segunda mano. Cada pieza tiene una historia y añade un toque único a mi hogar. ¡Totalmente recomendable!"</p>
+                    <p class="font-semibold text-blue-700">- Javier S., Coleccionista</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-gray-700 italic mb-4">"Su servicio de alquiler nos salvó en el último momento para un evento. Tenían exactamente lo que necesitábamos y la entrega fue impecable. ¡Profesionales al 100%!"</p>
+                    <p class="font-semibold text-blue-700">- Laura P., Organizadora de Eventos</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="testimonios.html" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out shadow-md text-lg">
+                    Leer Más Testimonios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="py-16 bg-blue-800 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6">¿Listo para Encontrar Tu Próximo Tesoro?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Ya sea para un proyecto profesional o para añadir un toque especial a tu vida, te ayudamos a descubrir lo que necesitas.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="contacto.html" class="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300 shadow-lg text-lg">
+                    Contacta con Nosotros
+                </a>
+                <a href="galeria.html" class="inline-block border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 shadow-lg text-lg">
+                    Explora la Galería
+                </a>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center md:text-left">
+                <img src="./img/logo-white.png" alt="Logo de Atrezzo & Tesoros Blanco" class="h-12 mx-auto md:mx-0 mb-4">
+                <p class="text-sm leading-relaxed">
+                    Atrezzo & Tesoros ofrece una selección exclusiva de atrezzo para alquiler y artículos únicos de segunda mano. Damos vida a tus ideas con objetos llenos de historia.
+                </p>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-semibold mb-4 text-white">Navegación</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white transition duration-300">Inicio</a></li>
+                    <li><a href="servicios.html" class="hover:text-white transition duration-300">Atrezzo Alquiler</a></li>
+                    <li><a href="tienda.html" class="hover:text-white transition duration-300">Tienda Segunda Mano</a></li>
+                    <li><a href="galeria.html" class="hover:text-white transition duration-300">Galería</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition duration-300">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-semibold mb-4 text-white">Contacto</h3>
+                <p class="text-sm mb-2">Email: info@tudominio.com</p>
+                <p class="text-sm mb-4">Teléfono: +34 XXX XXX XXX</p>
+                <h3 class="text-xl font-semibold mb-4 text-white">Síguenos</h3>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://www.instagram.com/tuperfil/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.65.051 1.05.04 1.749.204 2.22.477.52.294.953.727 1.246 1.247.273.47.436 1.17.477 2.22.04 2.43.05 2.715.051 3.65s-.01 2.715-.051 3.65c-.04.99-.204 1.748-.477 2.22-.294.52-.727.953-1.247 1.246-.47.273-1.17.436-2.22.477-2.43.04-2.715.05-3.65.051s-2.715-.01-3.65-.051c-1.05-.04-1.749-.204-2.22-.477-.52-.294-.953-.727-1.246-1.247-.273-.47-.436-1.17-.477-2.22-.04-2.43-.05-2.715-.051-3.65s.01-2.715.051-3.65c.04-.99.204-1.748.477-2.22.294-.52.727-.953 1.247-1.246.47-.273 1.17-.436 2.22-.477 2.43-.04 2.715-.05 3.65-.051zm0 1.5c-2.062 0-2.316.009-3.111.04-.84.032-1.373.18-1.785.405-.444.24-.79.585-1.03.955-.24.37-.403.903-.435 1.743-.032.8-.04 1.055-.04 3.111s.009 2.316.04 3.111c.032.84.18 1.373.405 1.785.24.444.585.79.955 1.03.37.24.903.403 1.743.435.8.032 1.055.04 3.111.04s2.316-.009 3.111-.04c.84-.032 1.373-.18 1.785-.405.444-.24.79-.585 1.03-.955.24-.37.403-.903.435-1.743.032-.8.04-1.055.04-3.111s-.009-2.316-.04-3.111c-.032-.84-.18-1.373-.405-1.785-.24-.444-.585-.79-.955-1.03-.37-.24-.903-.403-1.743-.435C14.631 3.509 14.376 3.5 12.315 3.5z"></path><path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0 1.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"></path></svg>
+                    </a>
+                    <a href="https://www.facebook.com/tuperfil/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.56V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z"></path></svg>
+                    </a>
+                    </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-sm">
+            <p>&copy; 2024 Atrezzo & Tesoros. Todos los derechos reservados.</p>
+            <p class="mt-2"><a href="politica-privacidad.html" class="hover:underline">Política de Privacidad</a> | <a href="aviso-legal.html" class="hover:underline">Aviso Legal</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = mobileMenuButton.querySelector('.hamburger-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
