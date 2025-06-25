@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/pilarortiz77/arteycine2025/sitemap.xml
